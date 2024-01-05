@@ -212,6 +212,11 @@ body.active { overflow: hidden; }
   height: var(--height, 45px);
   padding-inline: var(--padding-inline, 35px);
   transition: var(--transition-1);
+  width: fit-content;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .btn-hover {
@@ -1766,4 +1771,38 @@ textarea.input-field {
 
   .footer-top .container { grid-template-columns: 1.4fr 1fr 1fr 1.6fr; }
 
+}
+/* styles.css */
+
+/* .booking table css */
+
+.booking-table {
+  width: calc(100% - 200px); /* Adjust the width based on your preference */
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+.booking-table th, .booking-table td {
+  padding: 15px;
+  border: 1px solid #ffd700; /* Yellow border color */
+  text-align: left;
+}
+
+.booking-table th {
+  background-color: #ffd700; /* Yellow background for header */
+  color: white; /* White text color for header */
+}
+
+.booking-table tr:nth-child(even) {
+  background-color: white; /* White background for even rows */
+}
+
+.booking-table tr:hover {
+  background-color: #fffacd; /* Light yellow background on hover */
+}
+.flex-container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

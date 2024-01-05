@@ -45,28 +45,20 @@ app.post('/api/book-table', async (req, res) => {
     res.status(500).json({ message: 'Internal Server Error' });
   }
 });
-
-//Reserve a sit
-app.post('/api/register', async (req, res) => {
+// API endpoint to retrieve all bookings
+app.get('/api/bookings', async (req, res) => {
   try {
-    // Your MongoDB logic for user registration here
-    res.status(201).json({ message: 'User registered successfully' });
+    // Fetch all bookings from the database
+    const allBookings = await Booking.find();
+
+    // Return the fetched data as a JSON response
+    res.status(200).json(allBookings);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ message: 'Internal Server Error' });
   }
 });
 
-// Example endpoint to get all users
-app.get('/api/users', async (req, res) => {
-  try {
-    // Your MongoDB logic to fetch users here
-    res.status(200).json({ users: [] });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Internal server error' });
-  }
-});
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
