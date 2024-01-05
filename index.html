@@ -11,7 +11,6 @@
     - favicon
   -->
   <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-
   <!-- 
     - custom css link
   -->
@@ -32,7 +31,7 @@
   <link rel="preload" as="image" href="./assets/images/hero-banner.png" media="min-width(768px)">
   <link rel="preload" as="image" href="./assets/images/hero-banner-bg.png" media="min-width(768px)">
   <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
-
+  <script src="/server/script.js" defer></script>
 </head>
 
 <body id="top">
@@ -79,8 +78,10 @@
           <ion-icon name="search-outline"></ion-icon>
         </button>
 
-        <button class="btn btn-hover">Reservation</button>
-
+        <!-- <button class="btn btn-hover">Reservation</button> -->
+        <h1>Foodie App</h1>
+        <button onclick="getData()">Get Data from Server</button>
+        <div id="output"></div>
         <button class="nav-toggle-btn" aria-label="Toggle Menu" data-menu-toggle-btn>
           <span class="line top"></span>
           <span class="line middle"></span>
@@ -1007,13 +1008,13 @@
                     <a href="#" class="card-meta-link">
                       <ion-icon name="calendar-outline"></ion-icon>
 
-                      <time class="meta-info" datetime="2022-01-01">Jan 01 2022</time>
+                      <time class="meta-info" datetime="2022-01-01">Dec 01 2023</time>
                     </a>
 
                     <a href="#" class="card-meta-link">
                       <ion-icon name="person-outline"></ion-icon>
 
-                      <p class="meta-info">Jonathan Smith</p>
+                      <p class="meta-info">Ankit Attri</p>
                     </a>
 
                   </div>
@@ -1054,13 +1055,13 @@
                     <a href="#" class="card-meta-link">
                       <ion-icon name="calendar-outline"></ion-icon>
 
-                      <time class="meta-info" datetime="2022-01-01">Jan 01 2022</time>
+                      <time class="meta-info" datetime="2022-01-01">Dec 04 2023</time>
                     </a>
 
                     <a href="#" class="card-meta-link">
                       <ion-icon name="person-outline"></ion-icon>
 
-                      <p class="meta-info">Jonathan Smith</p>
+                      <p class="meta-info">Parkhar Ladwa</p>
                     </a>
 
                   </div>
@@ -1101,13 +1102,13 @@
                     <a href="#" class="card-meta-link">
                       <ion-icon name="calendar-outline"></ion-icon>
 
-                      <time class="meta-info" datetime="2022-01-01">Jan 01 2022</time>
+                      <time class="meta-info" datetime="2022-01-01">Nov 20 2023</time>
                     </a>
 
                     <a href="#" class="card-meta-link">
                       <ion-icon name="person-outline"></ion-icon>
 
-                      <p class="meta-info">Jonathan Smith</p>
+                      <p class="meta-info">Naman Lamba</p>
                     </a>
 
                   </div>
